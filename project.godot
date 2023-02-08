@@ -1,0 +1,63 @@
+; Engine configuration file.
+; It's best edited using the editor UI and not directly,
+; since the parameters that go here are not all obvious.
+;
+; Format:
+;   [section] ; section goes between []
+;   param=value ; assign values to parameters
+
+config_version=4
+
+_global_script_classes=[  ]
+_global_script_class_icons={
+}
+
+[application]
+
+config/name="CFEtycoon-Rea"
+run/main_scene="res://GUI/InterfazInventores.tscn"
+config/icon="res://Graphics/IconosAPP/plug432.png"
+
+[autoload]
+
+GlobalVar="*res://Scrips/global_var.gd"
+
+[compression]
+
+formats/zstd/long_distance_matching=true
+
+[display]
+
+window/size/width=1080
+window/size/height=1920
+window/handheld/orientation="portrait"
+window/stretch/mode="viewport"
+
+[input]
+
+ui_up={
+"deadzone": 0.5,
+"events": [ Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":0,"alt":false,"shift":false,"control":false,"meta":false,"command":false,"pressed":false,"scancode":16777232,"physical_scancode":0,"unicode":0,"echo":false,"script":null)
+, Object(InputEventJoypadButton,"resource_local_to_scene":false,"resource_name":"","device":0,"button_index":12,"pressure":0.0,"pressed":false,"script":null)
+ ]
+}
+BUTTON_WHEEL_DOWN={
+"deadzone": 0.5,
+"events": [ Object(InputEventMouseButton,"resource_local_to_scene":false,"resource_name":"","device":0,"alt":false,"shift":false,"control":false,"meta":false,"command":false,"button_mask":0,"position":Vector2( 0, 0 ),"global_position":Vector2( 0, 0 ),"factor":1.0,"button_index":1,"pressed":false,"doubleclick":false,"script":null)
+ ]
+}
+
+[memory]
+
+limits/message_queue/max_size_kb=512000
+
+[rendering]
+
+quality/driver/driver_name="GLES2"
+vram_compression/import_etc=true
+limits/buffers/canvas_polygon_buffer_size_kb=10000
+limits/buffers/canvas_polygon_index_buffer_size_kb=10000
+limits/buffers/immediate_buffer_size_kb=100000
+environment/default_clear_color=Color( 0.352941, 0.815686, 0.937255, 1 )
+limits/buffers/blend_shape_max_buffer_size_kb=100000
+limits/rendering/max_renderable_elements=1000000

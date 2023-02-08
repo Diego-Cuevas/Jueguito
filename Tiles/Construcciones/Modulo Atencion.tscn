@@ -1,0 +1,19 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://Tiles/Construcciones/Aerogenerador.tscn" type="PackedScene" id=1]
+[ext_resource path="res://Graphics/Edificios/DISTRIBUIDORES/Modulo-Atencion-Clientes.png" type="Texture" id=2]
+[ext_resource path="res://Tiles/Construcciones/Modulo Atencion.gd" type="Script" id=3]
+
+[node name="Node2D" instance=ExtResource( 1 )]
+script = ExtResource( 3 )
+ConsumoDeEnergia = 10
+precio = 1000
+desc = "Modulo Atencion"
+costo_investigacion = 0
+costo_dinero = 1000
+Produccion = 2
+TipoProduccion = "Investigacionxm"
+Descri = "son encargados de la administracion  y a su ves  de la  investigacion para el desbloqueo de nuevas tecnologias  GENERA 2 PUNTOS DE INVESTIGACION  y consume 10 unidades de dinero"
+
+[node name="sprite23" parent="construccion23" index="0"]
+texture = ExtResource( 2 )

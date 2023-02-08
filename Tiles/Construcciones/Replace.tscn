@@ -1,0 +1,13 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://Tiles/Construcciones/Aerogenerador.tscn" type="PackedScene" id=1]
+[ext_resource path="res://Graphics/PNG/Tiles/Terrain/Grass/grass_05.png" type="Texture" id=2]
+[ext_resource path="res://Tiles/Construcciones/Replace.gd" type="Script" id=3]
+
+[node name="Node2D" instance=ExtResource( 1 )]
+script = ExtResource( 3 )
+desc = "Replace"
+costo_dinero = 100
+
+[node name="sprite23" parent="construccion23" index="0"]
+texture = ExtResource( 2 )

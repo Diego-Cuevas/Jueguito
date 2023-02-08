@@ -1,0 +1,18 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://Tiles/Construcciones/Aerogenerador.tscn" type="PackedScene" id=1]
+[ext_resource path="res://Tiles/Construcciones/Central Carbon.gd" type="Script" id=2]
+[ext_resource path="res://Graphics/Edificios/GENERADORES/GeneradorCarbon6.png" type="Texture" id=3]
+
+[node name="Node2D" instance=ExtResource( 1 )]
+script = ExtResource( 2 )
+ConsumoDeEnergia = 0
+precio = 600
+desc = "Central Carbon"
+costo_investigacion = 1200
+costo_dinero = 3000
+Produccion = 30
+Descri = "Las centrales eléctricas de carbón son aquellas centrales termoeléctricas que queman carbón para generar electricidad. Las centrales eléctricas de carbón generan más de un tercio de la electricidad mundial, pero causan cientos de miles de muertes tempranas cada año, principalmente por la contaminación atmosférica.  Produce 30 unidades de calor."
+
+[node name="sprite23" parent="construccion23" index="0"]
+texture = ExtResource( 3 )

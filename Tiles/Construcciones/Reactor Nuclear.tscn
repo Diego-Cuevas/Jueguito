@@ -1,0 +1,18 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://Graphics/Edificios/GENERADORES/GeneradorNuclear4.png" type="Texture" id=1]
+[ext_resource path="res://Tiles/Construcciones/Aerogenerador.tscn" type="PackedScene" id=2]
+[ext_resource path="res://Tiles/Construcciones/Reactor Nuclear.gd" type="Script" id=3]
+
+[node name="Node2D" instance=ExtResource( 2 )]
+script = ExtResource( 3 )
+ConsumoDeEnergia = 0
+precio = 400
+desc = "Reactor Nuclear"
+costo_investigacion = 800
+costo_dinero = 2000
+Produccion = 20
+Descri = "Un reactor nuclear es un dispositivo en donde se produce una reacción nuclear en cadena de forma controlada. Se puede utilizar para la obtención de energía en las denominadas centrales nucleares, la producción de materiales fisionables, como el plutonio, para ser usados en armamento nuclear, la propulsión nuclear de buques o de satélites artificiales o la investigación Produce 20 unidades de calor."
+
+[node name="sprite23" parent="construccion23" index="0"]
+texture = ExtResource( 1 )

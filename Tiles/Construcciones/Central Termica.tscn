@@ -1,0 +1,16 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://Tiles/Construcciones/Aerogenerador.tscn" type="PackedScene" id=1]
+[ext_resource path="res://Graphics/PNG/Tiles/Medieval/medieval_largeCastle.png" type="Texture" id=2]
+[ext_resource path="res://Tiles/Construcciones/Central Termica.gd" type="Script" id=3]
+
+[node name="Node2D" instance=ExtResource( 1 )]
+script = ExtResource( 3 )
+precio = 10
+desc = "Central Termica"
+costo_dinero = -30
+costo_investigacion = 101
+bloqueo = "Bloqueado"
+
+[node name="sprite23" parent="construccion23" index="0"]
+texture = ExtResource( 2 )

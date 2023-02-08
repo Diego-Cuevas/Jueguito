@@ -1,0 +1,18 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://Tiles/Construcciones/Aerogenerador.tscn" type="PackedScene" id=1]
+[ext_resource path="res://Graphics/Edificios/GENERADORES/GeneradorGeotermico7.png" type="Texture" id=2]
+[ext_resource path="res://Tiles/Construcciones/Geotermal.gd" type="Script" id=3]
+
+[node name="Node2D" instance=ExtResource( 1 )]
+script = ExtResource( 3 )
+ConsumoDeEnergia = 0
+precio = 700
+desc = "Geotermal"
+costo_investigacion = 1400
+costo_dinero = 3500
+Produccion = 35
+Descri = "La energía geotérmica es una energía renovable que se obtiene mediante el aprovechamiento del calor del interior de la Tierra que se transmite a través de los cuerpos de roca caliente o conducción y convección, donde se suscitan procesos de interacción de agua subterránea y rocas, dando origen a los sistemas geotérmicos.  Produce 35 unidades de calor."
+
+[node name="sprite23" parent="construccion23" index="0"]
+texture = ExtResource( 2 )

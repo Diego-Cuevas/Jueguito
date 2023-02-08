@@ -1,0 +1,15 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://Tiles/Construcciones/Aerogenerador.tscn" type="PackedScene" id=1]
+[ext_resource path="res://Tiles/Construcciones/Casa Chica.gd" type="Script" id=2]
+[ext_resource path="res://Graphics/Edificios/CONSUMIDORES-CASAS/CasaPequena.png" type="Texture" id=3]
+
+[node name="Node2D" groups=["Saved"] instance=ExtResource( 1 )]
+script = ExtResource( 2 )
+precio = 50
+desc = "Casa Chica"
+TipoProduccion = "Dineroxm"
+Descri = "son parte de los consumidores a su ves realizan el pago para mantener el servicio CONSUME 2 UNIDADES DE CALOR  Y GENERA 5 UNIDADES DE DINERO"
+
+[node name="sprite23" parent="construccion23" index="0"]
+texture = ExtResource( 3 )

@@ -1,0 +1,18 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://Tiles/Construcciones/Aerogenerador.tscn" type="PackedScene" id=1]
+[ext_resource path="res://Graphics/Edificios/GENERADORES/GeneradorTesla8.png" type="Texture" id=2]
+[ext_resource path="res://Tiles/Construcciones/Tesla.gd" type="Script" id=3]
+
+[node name="Node2D" instance=ExtResource( 1 )]
+script = ExtResource( 3 )
+ConsumoDeEnergia = 0
+precio = 800
+desc = "Tesla"
+costo_investigacion = 1600
+costo_dinero = 4000
+Produccion = 40
+Descri = "La corriente oscilante crea un campo magnético que se acopla con el segundo arrollamiento, transfiriendo energía a la parte secundaria del transformador y produciendo que este oscile con la capacitancia toroidal.  Produce 40 unidades de calor."
+
+[node name="sprite23" parent="construccion23" index="0"]
+texture = ExtResource( 2 )

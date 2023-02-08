@@ -1,0 +1,65 @@
+[gd_scene load_steps=8 format=2]
+
+[ext_resource path="res://Graphics/iconsmenu/Iconos/Energia.png" type="Texture" id=2]
+[ext_resource path="res://Graphics/GUI/iNFORMACION RECURSOS/modelo_indicacor.gd" type="Script" id=3]
+[ext_resource path="res://Graphics/Font/VT323-Regular.ttf" type="DynamicFontData" id=4]
+
+[sub_resource type="Gradient" id=5]
+offsets = PoolRealArray( 0 )
+colors = PoolColorArray( 0.188235, 0.388235, 0.556863, 1 )
+
+[sub_resource type="GradientTexture" id=6]
+gradient = SubResource( 5 )
+
+[sub_resource type="DynamicFont" id=4]
+size = 60
+font_data = ExtResource( 4 )
+
+[sub_resource type="DynamicFont" id=3]
+size = 60
+font_data = ExtResource( 4 )
+
+[node name="Calor" type="NinePatchRect"]
+margin_right = 390.0
+margin_bottom = 120.0
+rect_min_size = Vector2( 100, 40 )
+texture = SubResource( 6 )
+script = ExtResource( 3 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="icon" type="TextureRect" parent="."]
+margin_left = 12.0
+margin_top = 8.0
+margin_right = 144.0
+margin_bottom = 118.0
+size_flags_horizontal = 3
+texture = ExtResource( 2 )
+expand = true
+
+[node name="calor" type="Label" parent="."]
+margin_left = 175.0
+margin_top = -3.0
+margin_right = 343.0
+margin_bottom = 57.0
+custom_fonts/font = SubResource( 4 )
+text = "Energia"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="text" type="Label" parent="."]
+margin_left = 162.0
+margin_top = 58.0
+margin_right = 354.0
+margin_bottom = 122.0
+custom_fonts/font = SubResource( 3 )
+text = "500"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}

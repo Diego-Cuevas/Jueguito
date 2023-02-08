@@ -1,0 +1,36 @@
+[gd_scene load_steps=6 format=2]
+
+[ext_resource path="res://font/Franchise.ttf" type="DynamicFontData" id=1]
+[ext_resource path="res://Graphics/regalo-icon (1).png" type="Texture" id=2]
+[ext_resource path="res://GUI/1regalos.gd" type="Script" id=3]
+
+[sub_resource type="DynamicFontData" id=1]
+
+[sub_resource type="DynamicFont" id=2]
+size = 37
+use_filter = true
+font_data = ExtResource( 1 )
+fallback/0 = SubResource( 1 )
+
+[node name="regalos" type="HBoxContainer"]
+margin_left = 0.950012
+margin_right = 318.95
+margin_bottom = 481.0
+script = ExtResource( 3 )
+
+[node name="RegaloButton" type="TextureButton" parent="."]
+margin_right = 128.0
+margin_bottom = 481.0
+texture_normal = ExtResource( 2 )
+
+[node name="Label" type="Label" parent="RegaloButton"]
+modulate = Color( 0.384314, 0.0862745, 0.0862745, 1 )
+margin_left = -32.5719
+margin_top = 120.742
+margin_right = 170.428
+margin_bottom = 158.742
+custom_constants/shadow_as_outline = 0
+custom_fonts/font = SubResource( 2 )
+text = "obtener regalo"
+
+[node name="Timer" type="Timer" parent="."]

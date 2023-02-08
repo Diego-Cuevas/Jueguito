@@ -1,0 +1,18 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://Graphics/Edificios/GENERADORES/GeneradorGas3.png" type="Texture" id=1]
+[ext_resource path="res://Tiles/Construcciones/Aerogenerador.tscn" type="PackedScene" id=2]
+[ext_resource path="res://Tiles/Construcciones/Central Gas.gd" type="Script" id=3]
+
+[node name="Node 2D" instance=ExtResource( 2 )]
+script = ExtResource( 3 )
+ConsumoDeEnergia = 0
+precio = 300
+desc = "Central Gas"
+costo_investigacion = 600
+costo_dinero = 1500
+Produccion = 15
+Descri = "El proceso de transformación del gas natural en electricidad comienza cuando el aire procedente del exterior se comprime a alta presión en el compresor. Desde ahí, se conduce a la cámara de combustión donde se mezcla con el combustible.  Produce 15 unidades de calor."
+
+[node name="sprite23" parent="construccion23" index="0"]
+texture = ExtResource( 1 )

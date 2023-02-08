@@ -1,0 +1,30 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://Graphics/Edificios/GENERADORES/Aerogenerador1.png" type="Texture" id=1]
+[ext_resource path="res://Tiles/Construcciones/Aerogenerador.gd" type="Script" id=2]
+
+[node name="Node2D" type="Node2D" groups=["Cons", "Saved"]]
+script = ExtResource( 2 )
+costo_investigacion = 200
+Produccion = 5
+
+[node name="construccion23" type="Area2D" parent="." groups=["Saved"]]
+
+[node name="sprite23" type="Sprite" parent="construccion23" groups=["Saved"]]
+texture = ExtResource( 1 )
+centered = false
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="construccion23"]
+position = Vector2( 61.4013, 71 )
+polygon = PoolVector2Array( -1.50384, -69.876, 58.6358, -34.9111, 58.9855, 35.1936, -1.15419, 70.3333, -60.9442, 35.3684, -61.119, -35.4356 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Tiempo_de_produccion" type="Timer" parent="."]
+wait_time = 5.0
+one_shot = true
+
+[node name="Timpo_de_Vida" type="Timer" parent="."]
+wait_time = 6.833
+one_shot = true

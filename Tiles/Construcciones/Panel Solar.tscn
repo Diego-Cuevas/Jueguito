@@ -1,0 +1,19 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://Graphics/Edificios/GENERADORES/GeneradorSolar2.png" type="Texture" id=1]
+[ext_resource path="res://Tiles/Construcciones/Aerogenerador.tscn" type="PackedScene" id=2]
+[ext_resource path="res://Tiles/Construcciones/Panel Solar.gd" type="Script" id=3]
+
+[node name="Node2D" instance=ExtResource( 2 )]
+script = ExtResource( 3 )
+ConsumoDeEnergia = 0
+precio = 200
+desc = "Panel Solar"
+costo_investigacion = 400
+costo_dinero = 1000
+bloqueo = "Bloqueado"
+Produccion = 10
+Descri = "Un panel solar, placa solar o módulo solar es un dispositivo que capta la energía de la radiación solar para su aprovechamiento.  Produce 10 unidades de calor."
+
+[node name="sprite23" parent="construccion23" index="0"]
+texture = ExtResource( 1 )

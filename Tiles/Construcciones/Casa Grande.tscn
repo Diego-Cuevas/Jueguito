@@ -1,0 +1,18 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://Tiles/Construcciones/Aerogenerador.tscn" type="PackedScene" id=1]
+[ext_resource path="res://Tiles/Construcciones/Casa Grande.gd" type="Script" id=2]
+[ext_resource path="res://Graphics/Edificios/CONSUMIDORES-CASAS/CasaGrande.png" type="Texture" id=3]
+
+[node name="Node2D" instance=ExtResource( 1 )]
+script = ExtResource( 2 )
+ConsumoDeEnergia = 6
+precio = 200
+desc = "Casa Grande"
+costo_investigacion = 300
+Produccion = 12
+TipoProduccion = "Dineroxm"
+Descri = "son parte de los consumidores a su ves realizan el pago para mantener el servicio CONSUME 6 UNIDADES DE CALOR  Y GENERA 12 UNIDADES DE DINERO "
+
+[node name="sprite23" parent="construccion23" index="0"]
+texture = ExtResource( 3 )

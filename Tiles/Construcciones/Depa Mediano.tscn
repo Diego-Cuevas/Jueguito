@@ -1,0 +1,19 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://Tiles/Construcciones/Aerogenerador.tscn" type="PackedScene" id=1]
+[ext_resource path="res://Graphics/Edificios/CONSUMIDORES-CASAS/departamentoMediano.png" type="Texture" id=2]
+[ext_resource path="res://Tiles/Construcciones/Depa Mediano.gd" type="Script" id=3]
+
+[node name="Node2D" instance=ExtResource( 1 )]
+script = ExtResource( 3 )
+ConsumoDeEnergia = 30
+precio = 500
+desc = "Depa Mediano"
+costo_investigacion = 600
+costo_dinero = 3000
+Produccion = 60
+TipoProduccion = "Dineroxm"
+Descri = "son parte de los consumidores a su ves realizan el pago para mantener el servicio CONSUME 30 UNIDADES DE CALOR  Y GENERA 60 UNIDADES DE DINERO "
+
+[node name="sprite23" parent="construccion23" index="0"]
+texture = ExtResource( 2 )
