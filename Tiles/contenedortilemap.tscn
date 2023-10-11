@@ -4,7 +4,7 @@
 [ext_resource path="res://Scrips/contenedortilemap.gd" type="Script" id=2]
 [ext_resource path="res://Graphics/GUI/iNFORMACION RECURSOS/Dinero.tscn" type="PackedScene" id=3]
 [ext_resource path="res://Graphics/GUI/iNFORMACION RECURSOS/modelo_indicacor.tscn" type="PackedScene" id=4]
-[ext_resource path="res://Graphics/GUI/iNFORMACION RECURSOS/Investigacion.tscn" type="PackedScene" id=5]
+[ext_resource path="res://Graphics/GUI/iNFORMACION RECURSOS/Mejoras.tscn" type="PackedScene" id=5]
 [ext_resource path="res://Scrips/Selector_Construcciones.gd" type="Script" id=6]
 [ext_resource path="res://Scrips/CameraMovement.gd" type="Script" id=7]
 [ext_resource path="res://aqua.res" type="TileSet" id=8]

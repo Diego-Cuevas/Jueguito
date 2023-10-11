@@ -6,11 +6,16 @@
 
 [node name="Node2D" instance=ExtResource( 1 )]
 script = ExtResource( 3 )
+nivel = 1
+ConsumoDeEnergia = 2
 precio = 10
 desc = "Central Termica"
+costo_mejora = 100
 costo_dinero = -30
-costo_investigacion = 101
 bloqueo = "Bloqueado"
+TipoProduccion = "Calorxm"
+Descri = "Un aerogenerador es un generador eléctrico que funciona convirtiendo la energía cinética del viento en energía mecánica a través de una hélice en energía eléctrica gracias a un alternador (generador de corriente eléctrica alterna). Produce 5 unidades de calor."
+costo_investigacion = 101
 
 [node name="sprite23" parent="construccion23" index="0"]
 texture = ExtResource( 2 )

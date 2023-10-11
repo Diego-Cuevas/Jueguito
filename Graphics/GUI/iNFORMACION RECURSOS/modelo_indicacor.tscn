@@ -19,7 +19,7 @@ font_data = ExtResource( 4 )
 size = 60
 font_data = ExtResource( 4 )
 
-[node name="Calor" type="NinePatchRect"]
+[node name="Energía" type="NinePatchRect"]
 margin_right = 390.0
 margin_bottom = 120.0
 rect_min_size = Vector2( 100, 40 )
@@ -44,7 +44,7 @@ margin_top = -3.0
 margin_right = 343.0
 margin_bottom = 57.0
 custom_fonts/font = SubResource( 4 )
-text = "Energia"
+text = "Energía"
 align = 1
 valign = 1
 __meta__ = {

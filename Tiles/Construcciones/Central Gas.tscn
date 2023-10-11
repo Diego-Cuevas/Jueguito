@@ -9,7 +9,6 @@ script = ExtResource( 3 )
 ConsumoDeEnergia = 0
 precio = 300
 desc = "Central Gas"
-costo_investigacion = 600
 costo_dinero = 1500
 Produccion = 15
 Descri = "El proceso de transformación del gas natural en electricidad comienza cuando el aire procedente del exterior se comprime a alta presión en el compresor. Desde ahí, se conduce a la cámara de combustión donde se mezcla con el combustible.  Produce 15 unidades de calor."
