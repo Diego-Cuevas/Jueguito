@@ -1,4 +1,4 @@
-[gd_scene load_steps=78 format=2]
+[gd_scene load_steps=76 format=2]
 
 [ext_resource path="res://Tiles/mapatileset.res" type="TileSet" id=1]
 [ext_resource path="res://Scrips/contenedortilemap.gd" type="Script" id=2]
@@ -55,25 +55,13 @@
 [ext_resource path="res://Scrips/Objetivos_View.gd" type="Script" id=53]
 [ext_resource path="res://Tiles/EliminarGua.gd" type="Script" id=54]
 [ext_resource path="res://Tiles/ConstruccionesGuardar.gd" type="Script" id=55]
+[ext_resource path="res://Graphics/GUI/iNFORMACION RECURSOS/Reparación.tscn" type="PackedScene" id=56]
+[ext_resource path="res://Graphics/GUI/iNFORMACION RECURSOS/Consumo.tscn" type="PackedScene" id=57]
 
 [sub_resource type="DynamicFont" id=4]
 size = 92
 outline_color = Color( 0.0196078, 0.0117647, 0.00392157, 1 )
 font_data = ExtResource( 41 )
-
-[sub_resource type="Gradient" id=14]
-offsets = PoolRealArray( 0 )
-colors = PoolColorArray( 0.188235, 0.388235, 0.556863, 1 )
-
-[sub_resource type="GradientTexture" id=15]
-gradient = SubResource( 14 )
-
-[sub_resource type="Gradient" id=16]
-offsets = PoolRealArray( 0 )
-colors = PoolColorArray( 0.188235, 0.388235, 0.556863, 1 )
-
-[sub_resource type="GradientTexture" id=17]
-gradient = SubResource( 16 )
 
 [sub_resource type="DynamicFont" id=1]
 size = 111
@@ -289,26 +277,23 @@ margin_top = 35.0
 margin_right = 1077.0
 margin_bottom = 155.0
 
-[node name="Calor" parent="Barra de Elementos/Recursos" instance=ExtResource( 4 )]
-margin_right = 354.0
-region_rect = Rect2( 1469.39, 83.0995, 407.767, 46.6722 )
-patch_margin_left = 107
-patch_margin_right = 247
-patch_margin_bottom = 40
+[node name="Energía" parent="Barra de Elementos/Recursos" instance=ExtResource( 4 )]
 
-[node name="Investigacion" parent="Barra de Elementos/Recursos" instance=ExtResource( 5 )]
-margin_left = 358.0
-margin_right = 748.0
-texture = SubResource( 15 )
-region_rect = Rect2( 0, -3.30896, 1018.05, 3.30896 )
-patch_margin_right = 390
+[node name="Consumo" parent="Barra de Elementos/Recursos" instance=ExtResource( 57 )]
+margin_left = 219.0
+margin_right = 434.0
 
 [node name="Dinero" parent="Barra de Elementos/Recursos" instance=ExtResource( 3 )]
-margin_left = 752.0
-margin_right = 1080.0
-texture = SubResource( 17 )
-patch_margin_left = 328
-patch_margin_top = 81
+margin_left = 438.0
+margin_right = 653.0
+
+[node name="Mejoras" parent="Barra de Elementos/Recursos" instance=ExtResource( 5 )]
+margin_left = 657.0
+margin_right = 872.0
+
+[node name="Reparación" parent="Barra de Elementos/Recursos" instance=ExtResource( 56 )]
+margin_left = 876.0
+margin_right = 1091.0
 
 [node name="Menu" type="HBoxContainer" parent="Barra de Elementos"]
 anchor_top = -0.002
@@ -915,6 +900,7 @@ margin_left = 90.0
 margin_top = 775.0
 margin_right = 190.0
 margin_bottom = 815.0
+rect_min_size = Vector2( 100, 40 )
 texture = SubResource( 7 )
 
 [node name="btnnombre" type="Label" parent="Selector_Construcciones/ConstruccionesLayer/ConstruccionesLayerint/VBoxContainer/NinePatchRect"]
@@ -1248,6 +1234,7 @@ margin_left = 8.0
 margin_top = 814.0
 margin_right = 108.0
 margin_bottom = 854.0
+rect_min_size = Vector2( 100, 40 )
 rect_scale = Vector2( 0.93954, 0.967296 )
 texture = SubResource( 12 )
 
@@ -1256,6 +1243,7 @@ margin_left = 7.0
 margin_top = 919.0
 margin_right = 397.0
 margin_bottom = 1039.0
+rect_min_size = Vector2( 100, 40 )
 rect_scale = Vector2( 1.0032, 0.82103 )
 
 [node name="Label" type="Label" parent="Selector_Desbloquear/ConstruccionesLayer/ConstruccionesLayerint/VBoxContainer/NinePatchRect"]
@@ -1413,6 +1401,7 @@ margin_left = 317.0
 margin_top = 287.0
 margin_right = 417.0
 margin_bottom = 327.0
+rect_min_size = Vector2( 100, 40 )
 patch_margin_right = 50
 script = ExtResource( 33 )
 

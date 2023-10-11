@@ -2,7 +2,7 @@
 
 [ext_resource path="res://Graphics/Font/VT323-Regular.ttf" type="DynamicFontData" id=1]
 [ext_resource path="res://Graphics/GUI/iNFORMACION RECURSOS/modelo_indicacor.tscn" type="PackedScene" id=2]
-[ext_resource path="res://Graphics/iconsmenu/Iconos/PI.png" type="Texture" id=3]
+[ext_resource path="res://Graphics/iconsmenu/upload-4-icon.png" type="Texture" id=3]
 
 [sub_resource type="DynamicFont" id=1]
 size = 60
@@ -15,22 +15,23 @@ font_data = ExtResource( 1 )
 [node name="Mejoras" instance=ExtResource( 2 )]
 
 [node name="icon" parent="." index="0"]
-margin_left = -11.0
-margin_top = -1.0
-margin_bottom = 120.0
+margin_left = 5.0
+margin_top = 13.0
+margin_right = 102.0
+margin_bottom = 110.0
 texture = ExtResource( 3 )
 
 [node name="calor" parent="." index="1"]
-margin_left = 120.0
+margin_left = 55.0
 margin_top = 4.0
-margin_right = 384.0
+margin_right = 319.0
 margin_bottom = 64.0
 custom_fonts/font = SubResource( 1 )
 text = "Mejoras"
 
 [node name="text" parent="." index="2"]
-margin_left = 161.0
+margin_left = 56.0
 margin_top = 54.0
-margin_right = 339.0
+margin_right = 234.0
 margin_bottom = 114.0
 custom_fonts/font = SubResource( 2 )
