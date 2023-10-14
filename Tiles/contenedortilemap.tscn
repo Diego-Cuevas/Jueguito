@@ -384,9 +384,9 @@ __meta__ = {
 
 [node name="Objetivos" type="TextureButton" parent="Barra de Elementos/Ayuda"]
 visible = false
-margin_top = 780.0
+margin_top = 260.0
 margin_right = 256.0
-margin_bottom = 1036.0
+margin_bottom = 516.0
 texture_normal = ExtResource( 51 )
 __meta__ = {
 "_edit_use_anchors_": false
@@ -405,6 +405,15 @@ margin_top = 260.0
 margin_right = 256.0
 margin_bottom = 516.0
 texture_normal = ExtResource( 11 )
+
+[node name="SubirDatos" type="TextureButton" parent="Barra de Elementos/Ayuda"]
+visible = false
+margin_top = 260.0
+margin_right = 256.0
+margin_bottom = 516.0
+texture_normal = ExtResource( 17 )
+
+[node name="AddRecord" type="HTTPRequest" parent="Barra de Elementos"]
 
 [node name="Ayuda_View" type="Control" parent="."]
 anchor_right = 1.0
@@ -1559,8 +1568,8 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 margin_left = -1.0
 margin_top = 3.0
-margin_right = -1.00012
-margin_bottom = 3.0
+margin_right = -825.0
+margin_bottom = -1661.0
 
 [node name="ConstruccionesLayerMen" type="CanvasLayer" parent="Eliminar Construccion"]
 script = ExtResource( 37 )
@@ -1650,6 +1659,8 @@ text = "ELIMINAR"
 [connection signal="pressed" from="Barra de Elementos/Ayuda/Configuracion" to="Configuracion_View/ConstruccionesLayer" method="_on_Configuracion_pressed"]
 [connection signal="pressed" from="Barra de Elementos/Ayuda/Configuracion3" to="Barra de Elementos" method="_on_Configuracion3_pressed"]
 [connection signal="pressed" from="Barra de Elementos/Ayuda/Configuracion3" to="Configuracion_View/ConstruccionesLayer" method="_on_Configuracion3_pressed"]
+[connection signal="pressed" from="Barra de Elementos/Ayuda/SubirDatos" to="Barra de Elementos" method="_on_SubirDatos_pressed"]
+[connection signal="request_completed" from="Barra de Elementos/AddRecord" to="Barra de Elementos" method="_on_AddRecord_request_completed"]
 [connection signal="pressed" from="Ayuda_View/ConstruccionesLayer/ConstruccionesLayerint/VBoxContainer/NinePatchRect/Button_izq" to="Ayuda_View" method="_on_Button_izq_pressed"]
 [connection signal="pressed" from="Ayuda_View/ConstruccionesLayer/ConstruccionesLayerint/VBoxContainer/NinePatchRect/Button_Der" to="Ayuda_View" method="_on_Button_Der_pressed"]
 [connection signal="pressed" from="Ayuda_View/ConstruccionesLayer/ConstruccionesLayerint/VBoxContainer/NinePatchRect/btnSalir" to="Ayuda_View/ConstruccionesLayer" method="_on_btnSalir_pressed"]

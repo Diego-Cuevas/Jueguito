@@ -1,5 +1,7 @@
 extends Node
 
+var player_data = {}
+
 var save_filename = "user://save_game.save"  #Ccreamos una variable para definir el nombre y ruta de nuestro  archivo de guardado
 var recursos= {"Energía":200, "Consumo":100, "Dinero":200,"Mejoras":200, "Reparación":100}
 var recursosxm= {"Dineroxm":0,"Investigacionxm":0,"Calorxm":0}
