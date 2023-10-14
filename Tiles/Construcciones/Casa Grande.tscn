@@ -6,10 +6,10 @@
 
 [node name="Node2D" instance=ExtResource( 1 )]
 script = ExtResource( 2 )
-ConsumoDeEnergia = 6
-precio = 200
+ConsumoDeEnergia = 8
+precio = 250
 desc = "Casa Grande"
-Produccion = 12
+Produccion = 2
 TipoProduccion = "Dineroxm"
 Descri = "son parte de los consumidores a su ves realizan el pago para mantener el servicio CONSUME 6 UNIDADES DE CALOR  Y GENERA 12 UNIDADES DE DINERO "
 

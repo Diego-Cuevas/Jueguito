@@ -6,7 +6,10 @@
 
 [node name="Node2D" instance=ExtResource( 2 )]
 script = ExtResource( 3 )
+ConsumoDeEnergia = 3
+precio = 100
 desc = "Casa"
+Produccion = 1
 
 [node name="sprite23" parent="construccion23" index="0"]
 texture = ExtResource( 1 )
