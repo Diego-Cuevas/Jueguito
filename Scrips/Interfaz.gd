@@ -24,12 +24,8 @@ func _on_AddUser_request_completed(result, response_code, headers, body):
 	f.open(archivo, File.WRITE)
 	f.store_var(GlobalVar.player_data)
 	f.close()
-	
-func _on_Iniciar_pressed():
-
 	get_tree().change_scene("res://Tiles/contenedortilemap.tscn")
-	pass # Replace with function body.
-
+	
 func _on_Iniciar_pressed():
 	if logged:
 		get_tree().change_scene("res://Tiles/contenedortilemap.tscn")
