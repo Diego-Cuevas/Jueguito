@@ -4,7 +4,7 @@
 [ext_resource path="res://Tiles/Construcciones/Casa Chica.gd" type="Script" id=2]
 [ext_resource path="res://Graphics/Edificios/CONSUMIDORES-CASAS/CasaPequena.png" type="Texture" id=3]
 
-[node name="Node2D" groups=["Saved"] instance=ExtResource( 1 )]
+[node name="Node2D" instance=ExtResource( 1 )]
 script = ExtResource( 2 )
 precio = 50
 desc = "Casa Chica"

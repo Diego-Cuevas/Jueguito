@@ -1,5 +1,6 @@
 extends "res://Tiles/Construcciones/Aerogenerador.gd"
-func _process(delta):
+
+func _process(_delta):
 	if $Tiempo_de_produccion.is_stopped():
 		$Tiempo_de_produccion.start()
-		GlobalVar.recursos["Calor"] += Produccion
+		GlobalVar.recursos["Energía"] += Produccion

@@ -9,7 +9,6 @@ script = ExtResource( 3 )
 ConsumoDeEnergia = 90
 precio = 700
 desc = "Empresa"
-costo_investigacion = 800
 costo_dinero = 4000
 Produccion = 180
 TipoProduccion = "Dineroxm"

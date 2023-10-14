@@ -8,7 +8,6 @@
 script = ExtResource( 3 )
 precio = 50
 desc = "Cen Investigacion"
-costo_investigacion = 102
 bloqueo = "Bloqueado"
 
 [node name="sprite23" parent="construccion23" index="0"]

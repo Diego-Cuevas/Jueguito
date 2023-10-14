@@ -1,6 +1,9 @@
 extends Control
+
 var cont = 0
+
 signal cambiar_datosmensaje
+
 func _cambiar_datosmensaje():
 	get_node("ConstruccionesLayer/ConstruccionesLayerint/VBoxContainer/NinePatchRect/Label").text = str(GlobalVar.MensajesAyuda[cont])
 	get_node("ConstruccionesLayer/ConstruccionesLayerint/VBoxContainer/NinePatchRect/icon").texture = GlobalVar.ImagenesAyuda[cont].instance().get_node("objetivo/icon").texture
@@ -12,7 +15,7 @@ func _cambiar_datosmensaje():
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	connect("cambiar_datosmensaje",self,"_cambiar_datosmensaje")
+	connect("cambiar_datosmensaje", self, "_cambiar_datosmensaje")
 	_cambiar_datosmensaje()
 	pass # Replace with function body.
 
@@ -25,7 +28,7 @@ func _ready():
 func _on_Button_izq_pressed():
 	cont -= 1
 	if cont  < 0:
-		cont =GlobalVar.MensajesAyuda.size()-1
+		cont = GlobalVar.MensajesAyuda.size()-1
 	emit_signal("cambiar_datosmensaje")
 
 

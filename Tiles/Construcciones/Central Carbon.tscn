@@ -9,7 +9,6 @@ script = ExtResource( 2 )
 ConsumoDeEnergia = 0
 precio = 600
 desc = "Central Carbon"
-costo_investigacion = 1200
 costo_dinero = 3000
 Produccion = 30
 Descri = "Las centrales eléctricas de carbón son aquellas centrales termoeléctricas que queman carbón para generar electricidad. Las centrales eléctricas de carbón generan más de un tercio de la electricidad mundial, pero causan cientos de miles de muertes tempranas cada año, principalmente por la contaminación atmosférica.  Produce 30 unidades de calor."

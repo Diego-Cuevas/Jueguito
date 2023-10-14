@@ -61,4 +61,3 @@ func calculate_cost():
 func _ready():
 	
 	pass
-

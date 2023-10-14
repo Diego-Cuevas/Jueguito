@@ -25,6 +25,8 @@ func _on_AddUser_request_completed(result, response_code, headers, body):
 	f.store_var(GlobalVar.player_data)
 	f.close()
 	
+func _on_Iniciar_pressed():
+
 	get_tree().change_scene("res://Tiles/contenedortilemap.tscn")
 	pass # Replace with function body.
 

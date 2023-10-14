@@ -19,32 +19,30 @@ font_data = ExtResource( 4 )
 size = 60
 font_data = ExtResource( 4 )
 
-[node name="Calor" type="NinePatchRect"]
-margin_right = 390.0
+[node name="Energía" type="NinePatchRect"]
+margin_right = 215.0
 margin_bottom = 120.0
-rect_min_size = Vector2( 100, 40 )
+rect_min_size = Vector2( 215, 40 )
 texture = SubResource( 6 )
 script = ExtResource( 3 )
-__meta__ = {
-"_edit_lock_": true
-}
 
 [node name="icon" type="TextureRect" parent="."]
-margin_left = 12.0
-margin_top = 8.0
-margin_right = 144.0
-margin_bottom = 118.0
+margin_left = -10.0
+margin_top = 17.0
+margin_right = 110.0
+margin_bottom = 117.0
 size_flags_horizontal = 3
 texture = ExtResource( 2 )
 expand = true
 
 [node name="calor" type="Label" parent="."]
-margin_left = 175.0
-margin_top = -3.0
-margin_right = 343.0
-margin_bottom = 57.0
+margin_left = 81.0
+margin_top = -2.0
+margin_right = 249.0
+margin_bottom = 58.0
+rect_scale = Vector2( 0.72, 1 )
 custom_fonts/font = SubResource( 4 )
-text = "Energia"
+text = "Energía"
 align = 1
 valign = 1
 __meta__ = {
@@ -52,10 +50,10 @@ __meta__ = {
 }
 
 [node name="text" type="Label" parent="."]
-margin_left = 162.0
-margin_top = 58.0
-margin_right = 354.0
-margin_bottom = 122.0
+margin_left = 43.0
+margin_top = 55.0
+margin_right = 235.0
+margin_bottom = 119.0
 custom_fonts/font = SubResource( 3 )
 text = "500"
 align = 1
