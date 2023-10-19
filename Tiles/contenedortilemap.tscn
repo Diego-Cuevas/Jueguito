@@ -1,4 +1,4 @@
-[gd_scene load_steps=76 format=2]
+[gd_scene load_steps=77 format=2]
 
 [ext_resource path="res://Tiles/mapatileset.res" type="TileSet" id=1]
 [ext_resource path="res://Scrips/contenedortilemap.gd" type="Script" id=2]
@@ -57,6 +57,7 @@
 [ext_resource path="res://Tiles/ConstruccionesGuardar.gd" type="Script" id=55]
 [ext_resource path="res://Graphics/GUI/iNFORMACION RECURSOS/Reparación.tscn" type="PackedScene" id=56]
 [ext_resource path="res://Graphics/GUI/iNFORMACION RECURSOS/Consumo.tscn" type="PackedScene" id=57]
+[ext_resource path="res://Tiles/ConstruccionesLayerSa.gd" type="Script" id=58]
 
 [sub_resource type="DynamicFont" id=4]
 size = 92
@@ -1637,6 +1638,32 @@ custom_fonts/font = SubResource( 19 )
 custom_styles/normal = SubResource( 18 )
 text = "ELIMINAR"
 
+[node name="Salida_View" type="Control" parent="."]
+margin_right = 40.0
+margin_bottom = 40.0
+
+[node name="ConstruccionesLayer" type="CanvasLayer" parent="Salida_View"]
+script = ExtResource( 58 )
+
+[node name="ConstruccionesLayerint" type="ColorRect" parent="Salida_View/ConstruccionesLayer"]
+visible = false
+margin_left = 240.0
+margin_top = 557.0
+margin_right = 849.0
+margin_bottom = 1304.0
+color = Color( 0.188235, 0.388235, 0.556863, 1 )
+
+[node name="ColorRect" type="ColorRect" parent="Salida_View/ConstruccionesLayer/ConstruccionesLayerint"]
+margin_right = 40.0
+margin_bottom = 56.0
+color = Color( 0.356863, 0.403922, 0.929412, 1 )
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Salida_View/ConstruccionesLayer/ConstruccionesLayerint"]
+margin_left = -3.0
+margin_top = 70.0
+margin_right = 607.0
+margin_bottom = 740.0
+
 [connection signal="finished" from="contenedortilemap/AudioStreamPlayer" to="contenedortilemap" method="_on_AudioStreamPlayer_finished"]
 [connection signal="pressed" from="Barra de Elementos/Regalo_View2/btnRegalo" to="contenedortilemap" method="_on_btnRegalo_pressed"]
 [connection signal="pressed" from="Barra de Elementos/Menu/Opciones" to="Barra de Elementos" method="_on_Opciones_pressed"]
@@ -1660,6 +1687,7 @@ text = "ELIMINAR"
 [connection signal="pressed" from="Barra de Elementos/Ayuda/Configuracion3" to="Barra de Elementos" method="_on_Configuracion3_pressed"]
 [connection signal="pressed" from="Barra de Elementos/Ayuda/Configuracion3" to="Configuracion_View/ConstruccionesLayer" method="_on_Configuracion3_pressed"]
 [connection signal="pressed" from="Barra de Elementos/Ayuda/SubirDatos" to="Barra de Elementos" method="_on_SubirDatos_pressed"]
+[connection signal="pressed" from="Barra de Elementos/Ayuda/SubirDatos" to="Salida_View/ConstruccionesLayer" method="_on_SubirDatos_pressed"]
 [connection signal="request_completed" from="Barra de Elementos/AddRecord" to="Barra de Elementos" method="_on_AddRecord_request_completed"]
 [connection signal="pressed" from="Ayuda_View/ConstruccionesLayer/ConstruccionesLayerint/VBoxContainer/NinePatchRect/Button_izq" to="Ayuda_View" method="_on_Button_izq_pressed"]
 [connection signal="pressed" from="Ayuda_View/ConstruccionesLayer/ConstruccionesLayerint/VBoxContainer/NinePatchRect/Button_Der" to="Ayuda_View" method="_on_Button_Der_pressed"]
