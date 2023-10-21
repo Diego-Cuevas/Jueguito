@@ -27,10 +27,10 @@ texture = SubResource( 6 )
 script = ExtResource( 3 )
 
 [node name="icon" type="TextureRect" parent="."]
-margin_left = -10.0
-margin_top = 17.0
-margin_right = 110.0
-margin_bottom = 117.0
+margin_left = 8.0
+margin_top = 15.0
+margin_right = 100.0
+margin_bottom = 109.0
 size_flags_horizontal = 3
 texture = ExtResource( 2 )
 expand = true
@@ -58,6 +58,3 @@ custom_fonts/font = SubResource( 3 )
 text = "500"
 align = 1
 valign = 1
-__meta__ = {
-"_edit_use_anchors_": false
-}
