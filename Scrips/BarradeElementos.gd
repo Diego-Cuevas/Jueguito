@@ -1,7 +1,5 @@
 extends CanvasLayer
 
-var url = 'https://cfetycoon.000webhostapp.com/api/add_record'
-
 func MostrarElemetos():
 	$Menu/Opciones.hide()
 	$Menu/constelementos.show()
@@ -55,6 +53,10 @@ func _on_Ayuda_pressed():
 
 func _on_Estadisticas_pressed():
 	Ayudaregresar() # Replace with function body.
+	
+func _on_SubirDatos_pressed():
+	Ayudaregresar()
+	pass # Replace with function body.
 
 func _on_Configuracion_pressed():
 	Ayudaregresar()
@@ -72,20 +74,9 @@ func _on_Delate_pressed():
 	pass # Replace with function body.
 
 
-func _on_AddRecord_request_completed(result, response_code, headers, body):
-	var response = body.get_string_from_utf8()
-	print(response)
-	get_tree().quit()
-	pass # Replace with function body.
 
-func _on_SubirDatos_pressed():
-	var data = {
-		"user_name":GlobalVar.player_data["user_name"],
-		"dinero":GlobalVar.recursos["Dinero"]
-	}
-	var envio = JSON.print(data)
-	$AddRecord.request(url,["Content-Type: application/json"],true,HTTPClient.METHOD_POST, envio)
-	pass # Replace with function body.
+
+
 
 
 

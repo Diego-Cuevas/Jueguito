@@ -1,4 +1,4 @@
-[gd_scene load_steps=76 format=2]
+[gd_scene load_steps=79 format=2]
 
 [ext_resource path="res://Tiles/mapatileset.res" type="TileSet" id=1]
 [ext_resource path="res://Scrips/contenedortilemap.gd" type="Script" id=2]
@@ -57,6 +57,7 @@
 [ext_resource path="res://Tiles/ConstruccionesGuardar.gd" type="Script" id=55]
 [ext_resource path="res://Graphics/GUI/iNFORMACION RECURSOS/Reparación.tscn" type="PackedScene" id=56]
 [ext_resource path="res://Graphics/GUI/iNFORMACION RECURSOS/Consumo.tscn" type="PackedScene" id=57]
+[ext_resource path="res://Tiles/ConstruccionesLayerSa.gd" type="Script" id=58]
 
 [sub_resource type="DynamicFont" id=4]
 size = 92
@@ -64,9 +65,10 @@ outline_color = Color( 0.0196078, 0.0117647, 0.00392157, 1 )
 font_data = ExtResource( 41 )
 
 [sub_resource type="DynamicFont" id=1]
-size = 111
-outline_color = Color( 0.752941, 0.0235294, 0.0235294, 1 )
-font_data = ExtResource( 41 )
+size = 110
+outline_size = 3
+outline_color = Color( 0.192157, 0.345098, 0.419608, 1 )
+font_data = ExtResource( 23 )
 fallback/0 = ExtResource( 23 )
 
 [sub_resource type="DynamicFont" id=2]
@@ -131,6 +133,18 @@ gradient = SubResource( 11 )
 size = 50
 outline_color = Color( 0.0509804, 0.027451, 0.027451, 1 )
 font_data = ExtResource( 41 )
+
+[sub_resource type="DynamicFont" id=28]
+size = 56
+outline_size = 4
+outline_color = Color( 0.172549, 0.356863, 0.588235, 1 )
+font_data = ExtResource( 23 )
+
+[sub_resource type="DynamicFont" id=29]
+size = 56
+outline_size = 4
+outline_color = Color( 0.172549, 0.356863, 0.588235, 1 )
+font_data = ExtResource( 23 )
 
 [node name="Node" type="Node"]
 script = ExtResource( 38 )
@@ -374,9 +388,9 @@ __meta__ = {
 
 [node name="Estadisticas" type="TextureButton" parent="Barra de Elementos/Ayuda"]
 visible = false
-margin_top = 520.0
+margin_top = 260.0
 margin_right = 256.0
-margin_bottom = 776.0
+margin_bottom = 516.0
 texture_normal = ExtResource( 9 )
 __meta__ = {
 "_edit_use_anchors_": false
@@ -412,8 +426,6 @@ margin_top = 260.0
 margin_right = 256.0
 margin_bottom = 516.0
 texture_normal = ExtResource( 17 )
-
-[node name="AddRecord" type="HTTPRequest" parent="Barra de Elementos"]
 
 [node name="Ayuda_View" type="Control" parent="."]
 anchor_right = 1.0
@@ -1637,6 +1649,64 @@ custom_fonts/font = SubResource( 19 )
 custom_styles/normal = SubResource( 18 )
 text = "ELIMINAR"
 
+[node name="Salida_View" type="Control" parent="."]
+margin_left = 1.0
+margin_top = 1.0
+margin_right = 41.0
+margin_bottom = 41.0
+
+[node name="ConstruccionesLayer" type="CanvasLayer" parent="Salida_View"]
+script = ExtResource( 58 )
+
+[node name="ConstruccionesLayerint" type="ColorRect" parent="Salida_View/ConstruccionesLayer"]
+visible = false
+margin_left = 240.0
+margin_top = 557.0
+margin_right = 849.0
+margin_bottom = 1304.0
+color = Color( 0.305882, 0.478431, 0.619608, 1 )
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Salida_View/ConstruccionesLayer/ConstruccionesLayerint"]
+margin_left = -3.0
+margin_top = 70.0
+margin_right = 607.0
+margin_bottom = 740.0
+
+[node name="Label" type="Label" parent="Salida_View/ConstruccionesLayer/ConstruccionesLayerint"]
+margin_left = -4.0
+margin_top = 72.0
+margin_right = 622.0
+margin_bottom = 317.0
+custom_colors/font_color = Color( 0.188235, 0.388235, 0.556863, 1 )
+custom_fonts/font = SubResource( 1 )
+text = "Sistema de 
+Guardado"
+align = 1
+__meta__ = {
+"_editor_description_": ""
+}
+
+[node name="Exit" type="Button" parent="Salida_View/ConstruccionesLayer/ConstruccionesLayerint"]
+margin_left = 140.0
+margin_top = 491.0
+margin_right = 467.0
+margin_bottom = 582.0
+custom_fonts/font = SubResource( 28 )
+text = "Guardar y salir"
+__meta__ = {
+"_editor_description_": ""
+}
+
+[node name="Save" type="Button" parent="Salida_View/ConstruccionesLayer/ConstruccionesLayerint"]
+margin_left = 141.0
+margin_top = 369.0
+margin_right = 466.0
+margin_bottom = 467.0
+custom_fonts/font = SubResource( 29 )
+text = "enviar datos"
+
+[node name="AddRecord" type="HTTPRequest" parent="Salida_View/ConstruccionesLayer"]
+
 [connection signal="finished" from="contenedortilemap/AudioStreamPlayer" to="contenedortilemap" method="_on_AudioStreamPlayer_finished"]
 [connection signal="pressed" from="Barra de Elementos/Regalo_View2/btnRegalo" to="contenedortilemap" method="_on_btnRegalo_pressed"]
 [connection signal="pressed" from="Barra de Elementos/Menu/Opciones" to="Barra de Elementos" method="_on_Opciones_pressed"]
@@ -1660,7 +1730,7 @@ text = "ELIMINAR"
 [connection signal="pressed" from="Barra de Elementos/Ayuda/Configuracion3" to="Barra de Elementos" method="_on_Configuracion3_pressed"]
 [connection signal="pressed" from="Barra de Elementos/Ayuda/Configuracion3" to="Configuracion_View/ConstruccionesLayer" method="_on_Configuracion3_pressed"]
 [connection signal="pressed" from="Barra de Elementos/Ayuda/SubirDatos" to="Barra de Elementos" method="_on_SubirDatos_pressed"]
-[connection signal="request_completed" from="Barra de Elementos/AddRecord" to="Barra de Elementos" method="_on_AddRecord_request_completed"]
+[connection signal="pressed" from="Barra de Elementos/Ayuda/SubirDatos" to="Salida_View/ConstruccionesLayer" method="_on_SubirDatos_pressed"]
 [connection signal="pressed" from="Ayuda_View/ConstruccionesLayer/ConstruccionesLayerint/VBoxContainer/NinePatchRect/Button_izq" to="Ayuda_View" method="_on_Button_izq_pressed"]
 [connection signal="pressed" from="Ayuda_View/ConstruccionesLayer/ConstruccionesLayerint/VBoxContainer/NinePatchRect/Button_Der" to="Ayuda_View" method="_on_Button_Der_pressed"]
 [connection signal="pressed" from="Ayuda_View/ConstruccionesLayer/ConstruccionesLayerint/VBoxContainer/NinePatchRect/btnSalir" to="Ayuda_View/ConstruccionesLayer" method="_on_btnSalir_pressed"]
@@ -1701,3 +1771,6 @@ text = "ELIMINAR"
 [connection signal="button_down" from="Eliminar Construccion/ConstruccionesLayerMen/ConstruccionesLayerintAceptar/VBoxContainerAceptar/NinePatchRectAceptar/btnEliminar" to="." method="_on_btnEliminar_button_down"]
 [connection signal="button_down" from="Eliminar Construccion/ConstruccionesLayerMen/ConstruccionesLayerintAceptar/VBoxContainerAceptar/NinePatchRectAceptar/btnEliminar" to="Selector_Construcciones" method="_on_btnEliminar_button_down"]
 [connection signal="pressed" from="Eliminar Construccion/ConstruccionesLayerMen/ConstruccionesLayerintAceptar/VBoxContainerAceptar/NinePatchRectAceptar/btnEliminar" to="Eliminar Construccion/ConstruccionesLayerMen" method="_on_btnAceptar_pressed"]
+[connection signal="pressed" from="Salida_View/ConstruccionesLayer/ConstruccionesLayerint/Exit" to="Salida_View/ConstruccionesLayer" method="_on_Exit_pressed"]
+[connection signal="pressed" from="Salida_View/ConstruccionesLayer/ConstruccionesLayerint/Save" to="Salida_View/ConstruccionesLayer" method="_on_Save_pressed"]
+[connection signal="request_completed" from="Salida_View/ConstruccionesLayer/AddRecord" to="Salida_View/ConstruccionesLayer" method="_on_AddRecord_request_completed"]

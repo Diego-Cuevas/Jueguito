@@ -1,7 +1,7 @@
 extends CanvasLayer
 
 const archivo = "user://SAVEFILE.save"
-var url = 'https://cfetycoon.000webhostapp.com/api/create_player'
+var url = 'http://cfetycoonadmin.test/create_player'
 var player_data = {}
 var logged = false
 
