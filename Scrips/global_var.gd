@@ -21,6 +21,7 @@ func _ready():
 	load_game()
 
 func save_game():
+	print("Guardando el archivo")
 	var save_file = File.new()
 	save_file.open(save_filename, File.WRITE)
 	var saved_nodes = get_tree().get_nodes_in_group("Saved")
@@ -32,6 +33,7 @@ func save_game():
 	save_file.close()
 
 func load_game():
+	print("Accediendo al archivo")
 	var save_file = File.new()
 	if not save_file.file_exists(save_filename):
 		return
