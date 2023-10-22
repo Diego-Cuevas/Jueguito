@@ -44,3 +44,7 @@ func load_game():
 		var new_obj = load(node_data.filename).instance()
 		get_node(node_data.parent).call_deferred('add_child',new_obj)
 		new_obj.load_save_stats(node_data)
+		
+func _notification(what):
+	if what == MainLoop.NOTIFICATION_WM_QUIT_REQUEST:
+		save_game()
