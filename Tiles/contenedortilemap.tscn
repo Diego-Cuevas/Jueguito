@@ -1659,7 +1659,6 @@ margin_bottom = 41.0
 script = ExtResource( 58 )
 
 [node name="ConstruccionesLayerint" type="ColorRect" parent="Salida_View/ConstruccionesLayer"]
-visible = false
 margin_left = 240.0
 margin_top = 557.0
 margin_right = 849.0
@@ -1703,7 +1702,7 @@ margin_top = 369.0
 margin_right = 466.0
 margin_bottom = 467.0
 custom_fonts/font = SubResource( 29 )
-text = "enviar datos"
+text = "guardar datos"
 
 [node name="AddRecord" type="HTTPRequest" parent="Salida_View/ConstruccionesLayer"]
 
