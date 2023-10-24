@@ -26,7 +26,9 @@ func save_game():
 	save_file.open(save_filename, File.WRITE)
 	var saved_nodes = get_tree().get_nodes_in_group("Saved")
 	for node in saved_nodes:
+		print(node.get_save_stats())
 		if node.filename.empty():
+			print("No hay nada que escribir")
 			break
 		var node_details = node.get_save_stats()
 		save_file.store_line(to_json(node_details))
@@ -43,6 +45,7 @@ func load_game():
 	save_file.open(save_filename,File.READ)
 	while save_file.get_position() < save_file.get_len():
 		var node_data = parse_json(save_file.get_line())
+		print(node_data.filename)
 		var new_obj = load(node_data.filename).instance()
 		get_node(node_data.parent).call_deferred('add_child',new_obj)
 		new_obj.load_save_stats(node_data)
