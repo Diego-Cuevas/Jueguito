@@ -1034,6 +1034,43 @@ para construir!
 align = 1
 valign = 1
 
+[node name="ConstruccionesLayerintBloq" type="ColorRect" parent="Selector_Construcciones/ConstruccionesLayer"]
+visible = false
+margin_top = 457.0
+margin_right = 1080.0
+margin_bottom = 1358.0
+color = Color( 0.188235, 0.388235, 0.556863, 1 )
+
+[node name="VBoxContainerMen" type="VBoxContainer" parent="Selector_Construcciones/ConstruccionesLayer/ConstruccionesLayerintBloq"]
+margin_left = 4.0
+margin_top = 1.0
+margin_right = 1078.0
+margin_bottom = 900.0
+
+[node name="NinePatchRectMen" type="NinePatchRect" parent="Selector_Construcciones/ConstruccionesLayer/ConstruccionesLayerintBloq/VBoxContainerMen"]
+margin_right = 1074.0
+
+[node name="btnAceptarMenBloq" type="Button" parent="Selector_Construcciones/ConstruccionesLayer/ConstruccionesLayerintBloq/VBoxContainerMen/NinePatchRectMen"]
+margin_left = 328.0
+margin_top = 607.0
+margin_right = 744.0
+margin_bottom = 697.0
+custom_colors/font_color = Color( 0.188235, 0.388235, 0.556863, 1 )
+custom_fonts/font = SubResource( 19 )
+custom_styles/normal = SubResource( 18 )
+text = "Aceptar"
+
+[node name="LabelMen" type="Label" parent="Selector_Construcciones/ConstruccionesLayer/ConstruccionesLayerintBloq/VBoxContainerMen/NinePatchRectMen"]
+margin_top = 91.0
+margin_right = 1075.0
+margin_bottom = 575.0
+custom_fonts/font = SubResource( 25 )
+text = "Aun faltan otros
+edificios para avanzar
+"
+align = 1
+valign = 1
+
 [node name="ConstruccionesLayerintMen2" type="ColorRect" parent="Selector_Construcciones/ConstruccionesLayer"]
 visible = false
 margin_top = 457.0
@@ -1747,6 +1784,7 @@ text = "enviar datos"
 [connection signal="gui_input" from="Selector_Construcciones/ConstruccionesLayer/ConstruccionesLayerint/VBoxContainer/NinePatchRect/btnComprar" to="Selector_Construcciones" method="_on_btnComprar_gui_input"]
 [connection signal="pressed" from="Selector_Construcciones/ConstruccionesLayer/ConstruccionesLayerint/VBoxContainer/NinePatchRect/btnSalir" to="Selector_Construcciones/ConstruccionesLayer" method="_on_btnSalir_pressed"]
 [connection signal="pressed" from="Selector_Construcciones/ConstruccionesLayer/ConstruccionesLayerintMen/VBoxContainerMen/NinePatchRectMen/btnAceptarMen" to="Selector_Construcciones/ConstruccionesLayer" method="_on_btnAceptarMen_pressed"]
+[connection signal="pressed" from="Selector_Construcciones/ConstruccionesLayer/ConstruccionesLayerintBloq/VBoxContainerMen/NinePatchRectMen/btnAceptarMenBloq" to="Selector_Construcciones/ConstruccionesLayer" method="_on_btnAceptarMenBloq_pressed"]
 [connection signal="pressed" from="Selector_Construcciones/ConstruccionesLayer/ConstruccionesLayerintMen2/VBoxContainerMen2/NinePatchRectMen2/btnAceptarMen2" to="Selector_Construcciones/ConstruccionesLayer" method="_on_btnAceptarMen2_pressed"]
 [connection signal="pressed" from="Selector_Construcciones/ConstruccionesLayer/ConstruccionesLayerintMenEliminar/VBoxContainerMen2/NinePatchRectMen2/btnAceptarMenEliminar" to="Selector_Construcciones" method="_on_btnAceptarMenEliminar_pressed"]
 [connection signal="pressed" from="Selector_Construcciones/ConstruccionesLayer/ConstruccionesLayerintMenEliminar/VBoxContainerMen2/NinePatchRectMen2/btnAceptarMenEliminar" to="Selector_Construcciones/ConstruccionesLayer" method="_on_btnAceptarMen2_pressed"]

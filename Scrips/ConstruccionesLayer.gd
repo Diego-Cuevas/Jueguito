@@ -29,3 +29,8 @@ func _on_btnAceptar_button_down():
 func _on_btnAceptarMen2_pressed():
 	$ConstruccionesLayerintMen2.hide()
 	pass # Replace with function body.
+
+
+func _on_btnAceptarMenBloq_pressed():
+	$ConstruccionesLayerintBloq.hide()
+	pass # Replace with function body.

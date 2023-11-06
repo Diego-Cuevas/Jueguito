@@ -1,6 +1,8 @@
 extends Control
 
 var en_contruccion =null
+var validacion
+var construccion_valida = true
 var cont = 0
 var contruccion_actual = null
 var fab
@@ -28,6 +30,7 @@ func _cambiar_datos():
 	get_node("ConstruccionesLayer/ConstruccionesLayerint/VBoxContainer/NinePatchRect/descri").text = str(GlobalVar.construcciones[cont].instance().Descri)
 
 func _construir():
+	GlobalVar.validacion[validacion] = true
 	nuevoEdificio = null
 	if GlobalVar.recursos["Dinero"] >= GlobalVar.construcciones[cont].instance().precio:
 		nuevoEdificio = GlobalVar.construcciones[cont].instance()
@@ -81,13 +84,26 @@ func _on_Button_Der_pressed():
 func _on_btnComprar_gui_input(event):
 	if event is InputEventMouseButton:
 		if event.is_pressed():
-			if GlobalVar.recursos["Dinero"] >= GlobalVar.construcciones[cont].instance().precio:
-				$ConstruccionesLayer/ConstruccionesLayerint.hide()
-				$ConstruccionesLayer/ConstruccionesLayerintAceptar.show()
-				_construir()
+			validacion = str(GlobalVar.construcciones[cont].instance().desc)
+			if GlobalVar.validacion[validacion] == false:
+				if GlobalVar.recursos["Dinero"] >= GlobalVar.construcciones[cont].instance().precio:
+					$ConstruccionesLayer/ConstruccionesLayerint.hide()
+					$ConstruccionesLayer/ConstruccionesLayerintAceptar.show()
+					_construir()
+				else:
+					$ConstruccionesLayer/ConstruccionesLayerint.hide()
+					$ConstruccionesLayer/ConstruccionesLayerintMen.show()
 			else:
-				$ConstruccionesLayer/ConstruccionesLayerint.hide()
-				$ConstruccionesLayer/ConstruccionesLayerintMen.show()
+				for key in GlobalVar.validacion:
+					if GlobalVar.validacion[key] == false:
+						construccion_valida = false
+				if construccion_valida:
+					$ConstruccionesLayer/ConstruccionesLayerint.hide()
+					$ConstruccionesLayer/ConstruccionesLayerintAceptar.show()
+					_construir()
+				else:
+					$ConstruccionesLayer/ConstruccionesLayerint.hide()
+					$ConstruccionesLayer/ConstruccionesLayerintBloq.show()
 
 func _on_btnAceptar_pressed():
 	if GlobalVar.posible:

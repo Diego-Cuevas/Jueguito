@@ -14,6 +14,7 @@ var MensajesObjetivos = ["Desbloquear 5 Construcciones Obten 1000 Unidades de Di
 var ImagenesObjetivos = [load("res://Graphics/Objetivos Imagenes/objetivo1.tscn"),load("res://Graphics/Objetivos Imagenes/objetivo2.tscn"),load("res://Graphics/Objetivos Imagenes/objetivo3.tscn"),load("res://Graphics/Objetivos Imagenes/objetivo4.tscn"),load("res://Graphics/Objetivos Imagenes/objetivo5.tscn")]
 var EstadoObjetivos = ["NO CUMPLIDO","NO CUMPLIDO","NO CUMPLIDO","NO CUMPLIDO","NO CUMPLIDO"]
 var ImagenesAyuda = [load("res://Graphics/Ayuda Imagenes/Ayuda1.tscn"),load("res://Graphics/Ayuda Imagenes/Ayuda2.tscn"),load("res://Graphics/Ayuda Imagenes/Ayuda3.tscn"),load("res://Graphics/Ayuda Imagenes/Ayuda4.tscn"),load("res://Graphics/Ayuda Imagenes/Ayuda5.tscn")]
+var validacion={"Aerogenerador":false, "Casa Chica":false, "Centro Integracion de Consumo":false, "Modulo Atencion":false}
 var mouse = null
 var posible = false
 
