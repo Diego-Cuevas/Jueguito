@@ -1035,6 +1035,7 @@ align = 1
 valign = 1
 
 [node name="ConstruccionesLayerintBloq" type="ColorRect" parent="Selector_Construcciones/ConstruccionesLayer"]
+visible = false
 margin_top = 457.0
 margin_right = 1080.0
 margin_bottom = 1358.0
