@@ -112,7 +112,7 @@ size = 45
 font_data = ExtResource( 41 )
 
 [sub_resource type="DynamicFont" id=25]
-size = 90
+size = 75
 font_data = ExtResource( 23 )
 
 [sub_resource type="DynamicFont" id=23]
@@ -1035,7 +1035,6 @@ align = 1
 valign = 1
 
 [node name="ConstruccionesLayerintBloq" type="ColorRect" parent="Selector_Construcciones/ConstruccionesLayer"]
-visible = false
 margin_top = 457.0
 margin_right = 1080.0
 margin_bottom = 1358.0
@@ -1051,8 +1050,8 @@ margin_bottom = 900.0
 margin_right = 1074.0
 
 [node name="btnAceptarMenBloq" type="Button" parent="Selector_Construcciones/ConstruccionesLayer/ConstruccionesLayerintBloq/VBoxContainerMen/NinePatchRectMen"]
-margin_left = 328.0
-margin_top = 607.0
+margin_left = 316.0
+margin_top = 589.0
 margin_right = 744.0
 margin_bottom = 697.0
 custom_colors/font_color = Color( 0.188235, 0.388235, 0.556863, 1 )
@@ -1061,14 +1060,25 @@ custom_styles/normal = SubResource( 18 )
 text = "Aceptar"
 
 [node name="LabelMen" type="Label" parent="Selector_Construcciones/ConstruccionesLayer/ConstruccionesLayerintBloq/VBoxContainerMen/NinePatchRectMen"]
-margin_top = 91.0
-margin_right = 1075.0
-margin_bottom = 575.0
+margin_left = 40.0
+margin_top = 110.0
+margin_right = 1062.0
+margin_bottom = 400.0
 custom_fonts/font = SubResource( 25 )
 text = "Aun faltan otros
 edificios para avanzar
 "
 align = 1
+valign = 1
+
+[node name="Edificios" type="Label" parent="Selector_Construcciones/ConstruccionesLayer/ConstruccionesLayerintBloq/VBoxContainerMen/NinePatchRectMen"]
+margin_left = 200.0
+margin_top = 300.0
+margin_right = 977.0
+margin_bottom = 579.0
+custom_fonts/font = SubResource( 25 )
+text = "
+"
 valign = 1
 
 [node name="ConstruccionesLayerintMen2" type="ColorRect" parent="Selector_Construcciones/ConstruccionesLayer"]

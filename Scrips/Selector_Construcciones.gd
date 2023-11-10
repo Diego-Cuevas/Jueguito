@@ -104,6 +104,10 @@ func _on_btnComprar_gui_input(event):
 				else:
 					$ConstruccionesLayer/ConstruccionesLayerint.hide()
 					$ConstruccionesLayer/ConstruccionesLayerintBloq.show()
+					$ConstruccionesLayer/ConstruccionesLayerintBloq/VBoxContainerMen/NinePatchRectMen/Edificios.text = ""
+					for value in GlobalVar.validacion.keys():
+						if GlobalVar.validacion[value] == false:
+							$ConstruccionesLayer/ConstruccionesLayerintBloq/VBoxContainerMen/NinePatchRectMen/Edificios.text += value+"\n"
 
 func _on_btnAceptar_pressed():
 	if GlobalVar.posible:
