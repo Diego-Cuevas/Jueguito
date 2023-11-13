@@ -282,7 +282,9 @@ script = ExtResource( 35 )
 [node name="btnRegalo" type="TextureButton" parent="Barra de Elementos/Regalo_View2"]
 margin_right = 256.0
 margin_bottom = 256.0
+rect_min_size = Vector2( 256, 256 )
 texture_normal = ExtResource( 46 )
+expand = true
 stretch_mode = 4
 
 [node name="Recursos" type="HBoxContainer" parent="Barra de Elementos"]
@@ -316,26 +318,31 @@ margin_left = 20.0
 margin_top = 1733.84
 margin_right = 1064.0
 margin_bottom = 1989.84
+rect_min_size = Vector2( 256, 256 )
 rect_scale = Vector2( 0.6, 0.6 )
 
 [node name="Opciones" type="TextureButton" parent="Barra de Elementos/Menu"]
 margin_right = 256.0
 margin_bottom = 256.0
+rect_min_size = Vector2( 256, 256 )
 texture_normal = ExtResource( 15 )
+expand = true
 
 [node name="constelementos" type="TextureButton" parent="Barra de Elementos/Menu"]
 visible = false
 margin_left = 260.0
 margin_right = 516.0
 margin_bottom = 256.0
+rect_min_size = Vector2( 256, 256 )
 texture_normal = ExtResource( 14 )
+expand = true
 stretch_mode = 5
 script = ExtResource( 24 )
 
 [node name="Update" type="TextureButton" parent="Barra de Elementos/Menu"]
 visible = false
-margin_left = 260.0
-margin_right = 516.0
+margin_left = 520.0
+margin_right = 776.0
 margin_bottom = 256.0
 texture_normal = ExtResource( 17 )
 __meta__ = {
@@ -344,8 +351,8 @@ __meta__ = {
 
 [node name="Delate" type="TextureButton" parent="Barra de Elementos/Menu"]
 visible = false
-margin_left = 260.0
-margin_right = 516.0
+margin_left = 780.0
+margin_right = 1036.0
 margin_bottom = 256.0
 texture_normal = ExtResource( 13 )
 script = ExtResource( 36 )
@@ -355,8 +362,7 @@ __meta__ = {
 
 [node name="back" type="TextureButton" parent="Barra de Elementos/Menu"]
 visible = false
-margin_left = 260.0
-margin_right = 516.0
+margin_right = 256.0
 margin_bottom = 256.0
 texture_normal = ExtResource( 20 )
 __meta__ = {
@@ -401,7 +407,9 @@ visible = false
 margin_top = 260.0
 margin_right = 256.0
 margin_bottom = 516.0
+rect_min_size = Vector2( 256, 256 )
 texture_normal = ExtResource( 51 )
+expand = true
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -837,9 +845,6 @@ margin_bottom = -9.0
 icon = ExtResource( 21 )
 flat = true
 expand_icon = true
-__meta__ = {
-"_edit_use_anchors_": false
-}
 
 [node name="EncenderMButton" type="Button" parent="Configuracion_View/ConstruccionesLayer/ConstruccionesLayerint/VBoxContainer/NinePatchRect"]
 margin_left = 124.0
