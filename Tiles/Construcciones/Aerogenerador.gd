@@ -15,14 +15,3 @@ func _process(_delta):
 	if $Tiempo_de_produccion.is_stopped():
 		$Tiempo_de_produccion.start()
 		GlobalVar.recursos["Energía"] += Produccion
-		
-func get_save_stats():
-	return{
-		'file_name' : get_filename(),
-		'parent' : get_parent().get_path(),
-		'x_pos' : position.x,
-		'y_pos' : position.y
-	}
-	
-func load_save_stats(stats):
-	position = Vector2(stats.x_pos,stats.y_pos)
