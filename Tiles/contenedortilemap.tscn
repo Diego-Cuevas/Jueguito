@@ -421,19 +421,19 @@ margin_right = 256.0
 margin_bottom = 516.0
 texture_normal = ExtResource( 47 )
 
-[node name="Configuracion3" type="TextureButton" parent="Barra de Elementos/Ayuda"]
-visible = false
-margin_top = 260.0
-margin_right = 256.0
-margin_bottom = 516.0
-texture_normal = ExtResource( 11 )
-
 [node name="SubirDatos" type="TextureButton" parent="Barra de Elementos/Ayuda"]
 visible = false
 margin_top = 260.0
 margin_right = 256.0
 margin_bottom = 516.0
 texture_normal = ExtResource( 17 )
+
+[node name="Configuracion3" type="TextureButton" parent="Barra de Elementos/Ayuda"]
+visible = false
+margin_top = 260.0
+margin_right = 256.0
+margin_bottom = 516.0
+texture_normal = ExtResource( 11 )
 
 [node name="Ayuda_View" type="Control" parent="."]
 anchor_right = 1.0
@@ -1780,10 +1780,10 @@ text = "guardar datos"
 [connection signal="pressed" from="Barra de Elementos/Ayuda/Objetivos" to="Objetivos_View/ConstruccionesLayer" method="_on_Objetivos_pressed"]
 [connection signal="pressed" from="Barra de Elementos/Ayuda/Configuracion" to="Barra de Elementos" method="_on_Configuracion_pressed"]
 [connection signal="pressed" from="Barra de Elementos/Ayuda/Configuracion" to="Configuracion_View/ConstruccionesLayer" method="_on_Configuracion_pressed"]
-[connection signal="pressed" from="Barra de Elementos/Ayuda/Configuracion3" to="Barra de Elementos" method="_on_Configuracion3_pressed"]
-[connection signal="pressed" from="Barra de Elementos/Ayuda/Configuracion3" to="Configuracion_View/ConstruccionesLayer" method="_on_Configuracion3_pressed"]
 [connection signal="pressed" from="Barra de Elementos/Ayuda/SubirDatos" to="Barra de Elementos" method="_on_SubirDatos_pressed"]
 [connection signal="pressed" from="Barra de Elementos/Ayuda/SubirDatos" to="Salida_View/ConstruccionesLayer" method="_on_SubirDatos_pressed"]
+[connection signal="pressed" from="Barra de Elementos/Ayuda/Configuracion3" to="Barra de Elementos" method="_on_Configuracion3_pressed"]
+[connection signal="pressed" from="Barra de Elementos/Ayuda/Configuracion3" to="Configuracion_View/ConstruccionesLayer" method="_on_Configuracion3_pressed"]
 [connection signal="pressed" from="Ayuda_View/ConstruccionesLayer/ConstruccionesLayerint/VBoxContainer/NinePatchRect/Button_izq" to="Ayuda_View" method="_on_Button_izq_pressed"]
 [connection signal="pressed" from="Ayuda_View/ConstruccionesLayer/ConstruccionesLayerint/VBoxContainer/NinePatchRect/Button_Der" to="Ayuda_View" method="_on_Button_Der_pressed"]
 [connection signal="pressed" from="Ayuda_View/ConstruccionesLayer/ConstruccionesLayerint/VBoxContainer/NinePatchRect/btnSalir" to="Ayuda_View/ConstruccionesLayer" method="_on_btnSalir_pressed"]

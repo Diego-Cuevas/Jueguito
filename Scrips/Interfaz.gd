@@ -14,6 +14,7 @@ func _ready():
 		$Label.text = "Bienvenido\n"+GlobalVar.player_data["user_name"]
 		$UserName.hide()
 		logged = true
+		GlobalVar.new_player = false
 	
 
 func _on_AddUser_request_completed(result, response_code, headers, body):
