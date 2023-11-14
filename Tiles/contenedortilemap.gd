@@ -4,7 +4,9 @@ func _on_btnEliminar_button_down():
 	pass
 
 func _ready():
-	load_game()
+	var f = File.new()
+	if(f.file_exists('user://save_game.save')):
+		load_game()
 
 func _notification(what):
 	if what == MainLoop.NOTIFICATION_WM_QUIT_REQUEST:
