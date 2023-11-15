@@ -7,9 +7,6 @@ func _ready():
 	var f = File.new()
 	if(f.file_exists('user://save_game.save')):
 		load_game()
-	if(GlobalVar.new_player):
-		print("No hay archivo")
-		$Ayuda_View/ConstruccionesLayer/ConstruccionesLayerint.show()
 
 func _notification(what):
 	if what == MainLoop.NOTIFICATION_WM_QUIT_REQUEST:
