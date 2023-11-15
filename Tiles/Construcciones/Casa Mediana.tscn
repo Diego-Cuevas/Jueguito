@@ -9,9 +9,12 @@ script = ExtResource( 3 )
 ConsumoDeEnergia = 4
 precio = 200
 desc = "Centro Integracion de Consumo"
-Produccion = 1
+Produccion = 3
 TipoProduccion = "Dineroxm"
-Descri = "son parte de los consumidores a su ves realizan el pago para mantener el servicio CONSUME 4 UNIDADES DE CALOR  Y GENERA 8 UNIDADES DE DINERO"
+Descri = "Se encarga de investigar nuevas tecnologías y mejorar las fuentes de energía ya existentes. Genera 15 unidades de mejoras y 15 unidades de reparacion."
 
 [node name="sprite23" parent="construccion23" index="0"]
 texture = ExtResource( 2 )
+
+[node name="Tiempo_de_produccion" parent="." index="1"]
+wait_time = 3.0

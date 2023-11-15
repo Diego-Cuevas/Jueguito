@@ -7,11 +7,12 @@
 [node name="Node2D" instance=ExtResource( 1 )]
 script = ExtResource( 2 )
 ConsumoDeEnergia = 2
+Consumo = 2
 precio = 150
 desc = "Casa Chica"
-Produccion = 1
+Produccion = 4
 TipoProduccion = "Dineroxm"
-Descri = "son parte de los consumidores a su ves realizan el pago para mantener el servicio CONSUME 2 UNIDADES DE CALOR  Y GENERA 5 UNIDADES DE DINERO"
+Descri = "son parte de los edificios que requieren el servicio de eléctricidad. CONSUME 2 UNIDADES DE energía  Y GENERA 2 UNIDADES DE consumo"
 
 [node name="sprite23" parent="construccion23" index="0"]
 texture = ExtResource( 3 )

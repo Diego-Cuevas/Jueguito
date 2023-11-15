@@ -10,9 +10,8 @@ Consumo = 3
 precio = 125
 desc = "Modulo Atencion"
 costo_dinero = 1000
-Produccion = 1
 TipoProduccion = "Investigacionxm"
-Descri = "son encargados de la administracion  y a su ves  de la  investigacion para el desbloqueo de nuevas tecnologias  GENERA 2 PUNTOS DE INVESTIGACION  y consume 10 unidades de dinero"
+Descri = "son encargados de la administración del servicio eléctrico cobrando la energía brindada a los edificios que la necesiten. Convierte 3 unidades de energia consumida en 3 unidades de oro."
 
 [node name="sprite23" parent="construccion23" index="0"]
 texture = ExtResource( 2 )
