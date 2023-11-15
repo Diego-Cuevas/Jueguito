@@ -9,4 +9,3 @@ func _process(_delta):
 		elif (GlobalVar.recursos["Consumo"] - Consumo) >= 0:
 			GlobalVar.recursos["Consumo"] -= Consumo
 			GlobalVar.recursos["Dinero"] += Consumo
-			GlobalVar.recursos["Mejoras"] += 5
