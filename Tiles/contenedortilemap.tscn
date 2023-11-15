@@ -559,6 +559,13 @@ margin_right = 759.0
 margin_bottom = 391.0
 expand = true
 
+[node name="Tutorial" type="Button" parent="Ayuda_View/ConstruccionesLayer/ConstruccionesLayerint/VBoxContainer/NinePatchRect"]
+margin_left = 72.0
+margin_top = -109.0
+margin_right = 282.0
+margin_bottom = -45.0
+text = "Tutorial para construir"
+
 [node name="Estadisticas_View" type="Control" parent="."]
 anchor_right = 1.0
 anchor_bottom = 1.0
@@ -1787,6 +1794,7 @@ text = "guardar datos"
 [connection signal="pressed" from="Ayuda_View/ConstruccionesLayer/ConstruccionesLayerint/VBoxContainer/NinePatchRect/Button_izq" to="Ayuda_View" method="_on_Button_izq_pressed"]
 [connection signal="pressed" from="Ayuda_View/ConstruccionesLayer/ConstruccionesLayerint/VBoxContainer/NinePatchRect/Button_Der" to="Ayuda_View" method="_on_Button_Der_pressed"]
 [connection signal="pressed" from="Ayuda_View/ConstruccionesLayer/ConstruccionesLayerint/VBoxContainer/NinePatchRect/btnSalir" to="Ayuda_View/ConstruccionesLayer" method="_on_btnSalir_pressed"]
+[connection signal="pressed" from="Ayuda_View/ConstruccionesLayer/ConstruccionesLayerint/VBoxContainer/NinePatchRect/Tutorial" to="Ayuda_View" method="_on_Tutorial_pressed"]
 [connection signal="pressed" from="Estadisticas_View/ConstruccionesLayer/ConstruccionesLayerint/VBoxContainer/NinePatchRect/btnSalir" to="Estadisticas_View/ConstruccionesLayer" method="_on_btnSalir_pressed"]
 [connection signal="pressed" from="Objetivos_View/ConstruccionesLayer/ConstruccionesLayerint/VBoxContainer/NinePatchRect/Button_izq" to="Objetivos_View" method="_on_Button_izq_pressed"]
 [connection signal="pressed" from="Objetivos_View/ConstruccionesLayer/ConstruccionesLayerint/VBoxContainer/NinePatchRect/Button_Der" to="Objetivos_View" method="_on_Button_Der_pressed"]
