@@ -1,8 +1,4 @@
-
-[gd_scene load_steps=81 format=2]
-
 [gd_scene load_steps=80 format=2]
-
 
 [ext_resource path="res://Tiles/mapatileset.res" type="TileSet" id=1]
 [ext_resource path="res://Scrips/contenedortilemap.gd" type="Script" id=2]
@@ -85,15 +81,6 @@ size = 70
 outline_color = Color( 0.0509804, 0.0509804, 0.0509804, 1 )
 font_data = ExtResource( 41 )
 fallback/0 = ExtResource( 23 )
-
-[sub_resource type="DynamicFontData" id=30]
-font_path = "res://font/Franchise.ttf"
-
-[sub_resource type="DynamicFont" id=31]
-size = 34
-outline_size = 2
-outline_color = Color( 0.0431373, 0.0980392, 0.364706, 1 )
-font_data = SubResource( 30 )
 
 [sub_resource type="DynamicFont" id=27]
 size = 120
@@ -446,29 +433,19 @@ texture_normal = ExtResource( 47 )
 visible = false
 margin_top = 1300.0
 margin_right = 256.0
-
-margin_bottom = 516.0
-texture_normal = ExtResource( 17 )
-
 margin_bottom = 1556.0
 rect_min_size = Vector2( 256, 256 )
 texture_normal = ExtResource( 59 )
 expand = true
 
-
 [node name="Configuracion3" type="TextureButton" parent="Barra de Elementos/Ayuda"]
 visible = false
 margin_top = 1560.0
 margin_right = 256.0
-
-margin_bottom = 516.0
-texture_normal = ExtResource( 11 )
-
 margin_bottom = 1816.0
 rect_min_size = Vector2( 256, 256 )
 texture_normal = ExtResource( 11 )
 expand = true
-
 
 [node name="Ayuda_View" type="Control" parent="."]
 anchor_right = 1.0
@@ -593,14 +570,6 @@ margin_top = 113.0
 margin_right = 759.0
 margin_bottom = 391.0
 expand = true
-
-[node name="Tutorial" type="Button" parent="Ayuda_View/ConstruccionesLayer/ConstruccionesLayerint/VBoxContainer/NinePatchRect"]
-margin_left = 16.0
-margin_top = -109.0
-margin_right = 342.0
-margin_bottom = -45.0
-custom_fonts/font = SubResource( 31 )
-text = "Tutorial para construir"
 
 [node name="Estadisticas_View" type="Control" parent="."]
 anchor_right = 1.0
@@ -1830,7 +1799,6 @@ text = "guardar datos"
 [connection signal="pressed" from="Ayuda_View/ConstruccionesLayer/ConstruccionesLayerint/VBoxContainer/NinePatchRect/Button_izq" to="Ayuda_View" method="_on_Button_izq_pressed"]
 [connection signal="pressed" from="Ayuda_View/ConstruccionesLayer/ConstruccionesLayerint/VBoxContainer/NinePatchRect/Button_Der" to="Ayuda_View" method="_on_Button_Der_pressed"]
 [connection signal="pressed" from="Ayuda_View/ConstruccionesLayer/ConstruccionesLayerint/VBoxContainer/NinePatchRect/btnSalir" to="Ayuda_View/ConstruccionesLayer" method="_on_btnSalir_pressed"]
-[connection signal="pressed" from="Ayuda_View/ConstruccionesLayer/ConstruccionesLayerint/VBoxContainer/NinePatchRect/Tutorial" to="Ayuda_View" method="_on_Tutorial_pressed"]
 [connection signal="pressed" from="Estadisticas_View/ConstruccionesLayer/ConstruccionesLayerint/VBoxContainer/NinePatchRect/btnSalir" to="Estadisticas_View/ConstruccionesLayer" method="_on_btnSalir_pressed"]
 [connection signal="pressed" from="Objetivos_View/ConstruccionesLayer/ConstruccionesLayerint/VBoxContainer/NinePatchRect/Button_izq" to="Objetivos_View" method="_on_Button_izq_pressed"]
 [connection signal="pressed" from="Objetivos_View/ConstruccionesLayer/ConstruccionesLayerint/VBoxContainer/NinePatchRect/Button_Der" to="Objetivos_View" method="_on_Button_Der_pressed"]

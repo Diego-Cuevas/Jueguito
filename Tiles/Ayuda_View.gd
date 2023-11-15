@@ -37,9 +37,3 @@ func _on_Button_Der_pressed():
 	if cont  >= GlobalVar.MensajesAyuda.size():
 		cont = 0
 	emit_signal("cambiar_datosmensaje")
-
-
-func _on_Tutorial_pressed():
-	print('Yendo a Youtube')
-	OS.shell_open("https://youtu.be/2Gad33whZGo")
-	pass # Replace with function body.
