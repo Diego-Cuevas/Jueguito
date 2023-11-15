@@ -1,6 +1,6 @@
 extends CanvasLayer
 
-var url = 'http://cfetycoonadmin.test/add_record'
+var url = 'https://cfetycoon.000webhostapp.com/api/add_record'
 var salir_juego = false
 
 # Declare member variables here. Examples:
@@ -9,6 +9,21 @@ var salir_juego = false
 
 
 # Called when the node enters the scene tree for the first time.
+func save_game():
+	var save_file = File.new()
+	save_file.open('user://save_game.save', File.WRITE)
+	var persistent_nodes := get_tree().get_nodes_in_group('Cons')
+	for node in persistent_nodes:
+		var node_data = {
+			"file_name": node.get_filename(),
+			"parent": node.get_parent().get_path(),
+			"pos_x": node.global_transform.origin.x,
+			"pos_y": node.global_transform.origin.y,
+		}
+		save_file.store_line(to_json(node_data))
+		
+	save_file.close()
+
 func _ready():
 	pass # Replace with function body.
 
@@ -21,6 +36,7 @@ func _on_AddRecord_request_completed(result, response_code, headers, body):
 	var response = body.get_string_from_utf8()
 	print(response)
 	if salir_juego:
+		save_game()
 		get_tree().quit()
 	else:
 		$ConstruccionesLayerint.hide()
