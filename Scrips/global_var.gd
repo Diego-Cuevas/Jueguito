@@ -17,6 +17,7 @@ var ImagenesAyuda = [load("res://Graphics/Ayuda Imagenes/Ayuda1.tscn"),load("res
 var validacion={"Aerogenerador":false, "Casa Chica":false, "Centro Integracion de Consumo":false, "Modulo Atencion":false}
 var mouse = null
 var posible = false
+var new_player = true
 
 func _ready():
 	pass
